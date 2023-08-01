@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import api from "../services/api";
-import apiKey from "../../apiKey";
+import apiKey from "../../apiKey.js";
 
 const Resultados = ({ route }) => {
   /* Usamos a prop route (do React Navigation) para
@@ -29,7 +29,7 @@ const Resultados = ({ route }) => {
             api_key: apiKey,
             language: "pt-BR",
             query: filme,
-            include_adult: false,
+            include_adult: true,
           },
         });
 
